@@ -1,0 +1,63 @@
+
+<div class="container mt-5">
+  <h1 class="text-center">Gestion de pedidos</h1>
+  <div class="mb-3">
+    <label class="form-label">Producto</label>
+    <input class="form-control" type="text" [(ngModel)]="pedido.producto" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Precio</label>
+    <input class="form-control" type="text" [(ngModel)]="pedido.precio" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Unidades</label>
+    <input class="form-control" type="text" [(ngModel)]="pedido.unidades" />
+  </div>
+  <input
+    class="btn btn-success"
+    type="button"
+    value="Grabar pedido"
+    (click)="guardar()"
+  />
+</div>
+
+<br />
+<br />
+<div>{{txtresultado}}</div>
+
+<br />
+<hr />
+<br />
+<div class="container">
+  <div class=" btn-group">
+    <input
+      class="btn btn-warning"
+      type="button"
+      value="Ver Pedidos"
+      (click)="verpedidos()"
+    />
+
+  </div>
+</div>
+
+
+<!-- tabla visible o invisible-->
+<div class="container" *ngIf="tablaVisible">
+  <h1 class="text-center">Pedidos</h1>
+  <table class="table">
+    <thead>
+      <tr class="bg-light">
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Unidades</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listapedidos">
+        <td>{{ p.producto }}</td>
+        <td>{{ p.precio }}</td>
+        <td>{{ p.unidades }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
