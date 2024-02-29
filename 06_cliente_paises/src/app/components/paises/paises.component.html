@@ -1,0 +1,106 @@
+<br><br>
+
+<div class="row">
+        <div class="col-md-4 order-md-2 mb-4"> </div>
+
+	<div class="col-md-4 order-md-2 mb-4" aling="center" style="text-align:center;">
+
+	<!--  -->
+
+	<h3>PAÍSES POR CONTINENTE: </h3>
+
+	<br><br>
+
+
+
+	</div>
+
+<div class="col-md-4 order-md-2 mb-4"></div>
+
+</div>
+
+
+
+
+
+
+<div id="contenedor" class="container">
+
+<div class="row">
+ <div class="col-md-4 order-md-2 mb-4" > </div>
+
+		<div class="col-md-4 order-md-2 mb-4" align="center">
+
+		<h6>Elegir un continente:</h6>
+
+    <select  [(ngModel)]="continenteSel" class="custom-select d-block w-100" (change)="paisesPorContinente()">;
+      <option disabled selected value> -- SELECCIONA UNA OPCIÓN -- </option>
+      <option *ngFor="let c of listacontinentes" value="{{ c }}">{{ c }}</option>
+    </select>
+
+	</div>
+
+
+<div class="col-md-4 order-md-2 mb-4"></div>
+</div>
+
+
+
+
+
+<div class="row">
+ <div class="col-md-2 order-md-2 mb-2" > </div>
+
+		<div class="col-md-8 order-md-2 mb-8" align="center">
+
+
+
+
+
+<!-- ELEMENTO VISIBLE O INVISIBLE. Si paises tiene algo se ve; si no, no-->
+<!-- <div *ngIf="paises"> -->
+<!-- paises existe Y ADEMÁS con algún elemento dentro -->
+<div *ngIf="paises&&paises.length>0">
+
+
+<div class="container" >
+  <br>
+  <h4 class="text-center">Países por continente</h4>
+  <table class="table">
+    <thead>
+      <tr class="bg-light" >
+        <th>NOMBRE</th>
+        <th>CAPITAL</th>
+        <th>POBLACIÓN</th>
+        <th>BANDERA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of paises">
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.capital }}</td>
+        <td>{{ p.poblacion }}</td>
+        <td align='center'><img src="{{ p.bandera }}" alt='Bandera' width='32' height='16'></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</div>
+
+
+	</div>
+
+
+<div class="col-md-2 order-md-2 mb-2"></div>
+</div>
+
+
+
+</div>
+
+
+
+<br>
+

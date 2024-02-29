@@ -1,0 +1,54 @@
+
+
+
+<div class="row">
+  <div class="col-md-4 order-md-2 mb-4"> </div>
+
+<div class="col-md-4 order-md-2 mb-4">
+
+<!-- Le ponemos buscar por que lo hemos definido en el controller @GetMapping(value="buscar") -->
+
+INTRODUCE TEMÁTICA:
+<input type="text" [(ngModel)]="tematica" class="form-control">
+
+<br>
+<br>
+<input type="button" class="btn btn-primary btn-lg btn-block" (click)="buscar()" value="BUSCAR">
+
+
+</div>
+
+<div class="col-md-4 order-md-2 mb-4"></div>
+
+</div>
+
+
+
+
+
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-2 order-md-2 mb-2" > </div>
+
+<div class="col-md-8 order-md-2 mb-8" align="center">
+
+
+      <div *ngFor="let r of resultados">
+        <a href="{{r.url}}">{{r.url}}</a><br>
+          <b>{{r.descripcion}}</b><br><hr><br>
+
+      </div>
+
+
+
+
+</div>
+
+<div class="col-md-2 order-md-2 mb-2"></div>
+
+</div>
+
+<br>
