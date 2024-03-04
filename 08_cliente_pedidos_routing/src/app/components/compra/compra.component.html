@@ -1,0 +1,41 @@
+
+
+
+
+<div class="container">
+  <h1>Nuevo pedido</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6" style="border: solid 1px">
+        <div class="form-group">
+          <label>Producto</label>
+          <select class="form-control" [(ngModel)]="pedido.codigoProducto">
+            <option *ngFor="let p of listaprod" value="{{ p.codigoProducto }}">
+              {{ p.producto }} | {{ p.precioUnitario }} | {{ p.stock }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Unidades</label>
+          <input
+            type="number"
+            min="0"
+            [(ngModel)]="pedido.unidades"
+            class="form-control"
+          />
+        </div>
+        <br />
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <button (click)="altaPedido()">Guardar pedido</button>
+
+    </div>
+    <br><br>
+
+
+
+  </div>
+</div>

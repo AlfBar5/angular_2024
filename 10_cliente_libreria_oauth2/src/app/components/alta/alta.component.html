@@ -1,0 +1,70 @@
+
+
+<div id="contenedor" class="container">
+
+  <div class="row">
+   <div class="col-md-4 order-md-2 mb-4" > </div>
+
+      <div class="col-md-4 order-md-2 mb-4" align="center">
+
+        <h4>DAR DE ALTA NUEVO LIBRO </h4>
+
+        <br><br>
+
+      <label>ELEGIR TEMÁTICA</label>
+
+      <select  [(ngModel)]="libro.tematica" class="form-control" >
+        <option disabled selected value> -- SELECCIONA UNA OPCIÓN -- </option>
+        <option *ngFor="let t of listatematic" value="{{ t }}">{{ t }}</option>
+      </select>
+
+      <br><br>
+      <div class="form-group">
+        <label>TÍTULO</label>
+        <input  type="text" [(ngModel)]="libro.titulo" class="form-control" required="" />
+      </div>
+
+      <br><br>
+      <div class="form-group">
+        <label>ISBN</label>
+        <input type="number" [(ngModel)]="libro.isbn" class="form-control" required="" />
+      </div>
+
+
+      <br><br>
+      <div class="form-group">
+
+        <button (click)="altaLibro()" class="btn btn-primary btn-lg btn-block">ALTA LIBRO</button>
+
+      </div>
+
+
+    </div>
+
+
+
+  <div class="col-md-4 order-md-2 mb-4"></div>
+  </div>
+
+</div>
+
+
+<br><br><br>
+
+
+<div id="contenedor" class="container">
+
+ <div class="row">
+     <div class="col-md-4 order-md-2 mb-4" > </div>
+
+        <div class="col-md-4 order-md-2 mb-4" align="center">
+
+          <a routerLink="/catalogo" >VOLVER AL CATÁLOGO</a>
+
+        </div>
+    <div class="col-md-4 order-md-2 mb-4"></div>
+ </div>
+
+</div>
+
+
