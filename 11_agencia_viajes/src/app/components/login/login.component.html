@@ -1,0 +1,46 @@
+
+
+<div class="row">
+  <div class="col-md-3 order-md-2 mb-3" > </div>
+
+
+
+     <div class="col-md-6 order-md-2 mb-6" align="center">
+
+      <h4 class="text-center">Login</h4>
+
+
+      <div >
+        <label class="form-label">Usuario</label>
+        <input class="form-control" type="text" [(ngModel)]="usuario" />
+      </div>
+      <br>
+      <div >
+        <label class="form-label">Password</label>
+        <input class="form-control" type="password" [(ngModel)]="password" />
+      </div>
+      <br>
+      <input
+        class="btn btn-success"
+        type="button"
+        value="Entrar"
+        (click)="login()"
+      />
+      <br>
+      <div >
+        <a class="text-info" routerLink="/registrar">Registrese aquí</a>
+      </div>
+
+
+    </div>
+
+
+
+
+
+<div class="col-md-3 order-md-2 mb-3"></div>
+</div>
+
+
+
+
